@@ -1,0 +1,361 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+
+    <script type="text/javascript">
+
+        var dane = [
+            ['Kandydat', 'Liczba głosów'],
+            
+        ['Dariusz Maciej GRABOWSKI', 89002],
+        
+        ['Piotr IKONOWICZ', 38672],
+        
+        ['Jarosław KALINOWSKI', 1047949],
+        
+        ['Marian KRZAKLEWSKI', 2739621],
+        
+        ['Aleksander KWAŚNIEWSKI', 9485224],
+        
+        ['Andrzej LEPPER', 537570],
+        
+        ['Jan ŁOPUSZAŃSKI', 139682],
+        
+        ['Andrzej Marian OLECHOWSKI', 3044141],
+        
+        ['Bogdan PAWŁOWSKI', 17164],
+        
+        ['Lech WAŁĘSA', 178590],
+        
+        ['Tadeusz Adam WILECKI', 28805],
+        
+        ['Janusz KORWIN-MIKKE', 252499],
+        
+        ];
+
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable(dane);
+
+            var options = {
+                title: 'Wykres kołowy',
+                backgroundColor: 'transparent',
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+            chart.draw(data, options);
+        }
+        google.charts.load('current', {
+       'packages': ['geochart'],
+       // Note: you will need to get a mapsApiKey for your project.
+       // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+       'mapsApiKey': 'AIzaSyD-9tSrke72PouQMnMX-a7eZSW0jkFMBWY'
+     });
+     google.charts.setOnLoadCallback(drawMarkersMap);
+
+      function drawMarkersMap() {
+      var data = google.visualization.arrayToDataTable([
+        ['Siedziba województwa',   'Liczba uprawnionych'],
+        ['Mazowieckie',  3948464],
+        ['Wielkopolskie',    2493157],
+        ['Lodzkie',      2052376],
+        ['Małopolskie',    2395210],
+        ['Śląskie',  3695358],
+        ['Kujawsko-Pomorskie', 607906],
+        ['Lubelskie', 1567120],
+        ['Dolnośląskie',   2258296],
+        ['Lubuskie', 1682020],
+        ['Opolskie',     812320],
+        ['Podkarpackie',   1552767],
+        ['Podlaskie', 909628],
+        ['Pomorskie',    1618898],
+        ['Świętorzystkie',    1009207],
+        ['Warmińsko-Mazurskie',   1073754],
+        ['Zachodniopomorskie',    1294300]
+      ]);
+
+      var options = {
+        region: 'PL',
+        displayMode: 'markers',
+        backgroundColor: 'transparent',
+        colorAxis: {colors: ['green', 'blue']}
+      };
+
+      var chart = new google.visualization.GeoChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    };
+
+    </script>
+
+
+    <title>
+        kraj Polska
+    </title>
+</head>
+<body>
+
+<header class="jumbotron">
+    <div class="container">
+         <h1>Wybory Prezydenta RP roku 2000</h1>
+    </div>
+</header>
+<article>
+    <section>
+        <h2 class="tytul">
+            Wyniki kandydatów w kraju Polska
+        </h2>
+
+        <div class="two-lines-top">
+            <div id="piechart"></div>
+            <div id="chart_div"></div>
+        </div>
+    </section>
+
+    <section>
+        <h2>
+            Statystyka ogółem w kraju
+        </h2>
+        <div class="table">
+            <table>
+                <tr>
+                    <td>
+                        Liczba uprawnionych do głosowania
+                    </td>
+                    <td>
+                        29122304
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Liczba wydanych kart do głosowania
+                    </td>
+                    <td>
+                        17798791
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Liczba kart wyjętych z urny
+                    </td>
+                    <td>
+                        17789231
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Liczba ważnych głosów
+                    </td>
+                    <td>
+                        17598919
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Liczba nieważnych głosów
+                    </td>
+                    <td>
+                        190312
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Frekwencja (%)
+                    </td>
+                    <td>
+                        61.12%
+                    </td>
+                </tr>
+            </table>
+
+
+
+            <table>
+                <thead>
+                <tr>
+                    <td>
+                        <b>Kandydat</b>
+                    </td>
+                    <td>
+                        <b>Głosy</b>
+                    </td>
+                </tr>
+                </thead>
+                <tbody>
+                
+                <tr>
+                    <td>
+                        Dariusz Maciej GRABOWSKI
+                    </td>
+                    <td>
+                        89002
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td>
+                        Piotr IKONOWICZ
+                    </td>
+                    <td>
+                        38672
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td>
+                        Jarosław KALINOWSKI
+                    </td>
+                    <td>
+                        1047949
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td>
+                        Marian KRZAKLEWSKI
+                    </td>
+                    <td>
+                        2739621
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td>
+                        Aleksander KWAŚNIEWSKI
+                    </td>
+                    <td>
+                        9485224
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td>
+                        Andrzej LEPPER
+                    </td>
+                    <td>
+                        537570
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td>
+                        Jan ŁOPUSZAŃSKI
+                    </td>
+                    <td>
+                        139682
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td>
+                        Andrzej Marian OLECHOWSKI
+                    </td>
+                    <td>
+                        3044141
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td>
+                        Bogdan PAWŁOWSKI
+                    </td>
+                    <td>
+                        17164
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td>
+                        Lech WAŁĘSA
+                    </td>
+                    <td>
+                        178590
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td>
+                        Tadeusz Adam WILECKI
+                    </td>
+                    <td>
+                        28805
+                    </td>
+
+                </tr>
+                
+                <tr>
+                    <td>
+                        Janusz KORWIN-MIKKE
+                    </td>
+                    <td>
+                        252499
+                    </td>
+
+                </tr>
+                
+
+                </tbody>
+
+            </table>
+
+        </div>
+    </section>
+</article>
+
+<nav class="two-lines-bottom">
+    <h4>Jednostki podrzędne</h4>
+    
+    <a href="wojewodztwa/DOLNOŚLĄSKIE.html"> DOLNOŚLĄSKIE </a>
+    
+    <a href="wojewodztwa/KUJAWSKO-POMORSKIE.html"> KUJAWSKO-POMORSKIE </a>
+    
+    <a href="wojewodztwa/LUBELSKIE.html"> LUBELSKIE </a>
+    
+    <a href="wojewodztwa/LUBUSKIE.html"> LUBUSKIE </a>
+    
+    <a href="wojewodztwa/ŁÓDZKIE.html"> ŁÓDZKIE </a>
+    
+    <a href="wojewodztwa/MAŁOPOLSKIE.html"> MAŁOPOLSKIE </a>
+    
+    <a href="wojewodztwa/MAZOWIECKIE.html"> MAZOWIECKIE </a>
+    
+    <a href="wojewodztwa/OPOLSKIE.html"> OPOLSKIE </a>
+    
+    <a href="wojewodztwa/PODKARPACKIE.html"> PODKARPACKIE </a>
+    
+    <a href="wojewodztwa/PODLASKIE.html"> PODLASKIE </a>
+    
+    <a href="wojewodztwa/POMORSKIE.html"> POMORSKIE </a>
+    
+    <a href="wojewodztwa/ŚLĄSKIE.html"> ŚLĄSKIE </a>
+    
+    <a href="wojewodztwa/ŚWIĘTOKRZYSKIE.html"> ŚWIĘTOKRZYSKIE </a>
+    
+    <a href="wojewodztwa/WARMIŃSKO-MAZURSKIE.html"> WARMIŃSKO-MAZURSKIE </a>
+    
+    <a href="wojewodztwa/WIELKOPOLSKIE.html"> WIELKOPOLSKIE </a>
+    
+    <a href="wojewodztwa/ZACHODNIOPOMORSKIE.html"> ZACHODNIOPOMORSKIE </a>
+    
+</nav>
+</body>
+</html>
